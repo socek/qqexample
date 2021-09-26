@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  rabbitmq:
+    image: rabbitmq:3
+    ports:
+      - "15672:5672"
+  qqe:
+    build: .
+    volumes:
+      - ./:/code
+    stdin_open: true
+    tty: true
+    environment:
+      - QQE_BROKER_HOST=rabbitmq

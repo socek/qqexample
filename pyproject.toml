@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "qqexample"
+version = "0.1.0"
+description = ""
+authors = ["Dominik Dlugajczyk <msocek@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+quackquack = "^1.0.4"
+fastapi = "^0.68.1"
+uvicorn = "^0.15.0"
+celery = "^5.1.2"
+python-decouple = "^3.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 99
+known_first_party = [ "qqe" ]
+known_third_party = [ "qq" ]
+multi_line_output=3
+sections = [ "FUTURE", "STDLIB", "DJANGO", "OTHER", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+force_single_line = true
+default_section = "OTHER"
+
+[tool.black]
+line_length = 99
+target-version = [ "py38" ]
+ignore = [ "W503", "W504" ]
