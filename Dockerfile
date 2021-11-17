@@ -32,5 +32,5 @@ RUN poetry install
 COPY --chown=user:user . $APP_DIR
 RUN poetry install
 
-CMD /code/cworker.sh
+CMD /code/fastapi.sh
 
